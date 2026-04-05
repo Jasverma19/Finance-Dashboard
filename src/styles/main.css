@@ -1,0 +1,121 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F7F8FA;
+  color: #1A1D23;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #ECEEF2;
+}
+
+.container {
+  padding: 24px;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark{
+  background: #0F1117;
+  color:#E8EAF0;
+}
+
+.dark .header {
+  background: #161A24;
+  border-color: #252A36;
+}
+
+.dark .card {
+  background: #161A24;
+  border-color: #252A36;
+  color: #E8EAF0;
+}
+
+.dark table {
+  color: white;
+}
+
+
+.dark input, .dark select {
+  background: #161A24;
+  color: #E8EAF0;
+  border-color: #252A36;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #ECEEF2;
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background: #1A1D23;
+  color: #ffffff;
+  letter-spacing: -0.1px;
+  transition: opacity 0.15s ease;
+}
+
+button:hover{
+  opacity: 0.82;
+}
+
+button.ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #ECEEF2;
+  transition: background 0.15s;
+}
+
+button.ghost:hover {
+  background: #F0F2F7;
+  opacity: 1;
+}
+
+.dark button { background: #E8EAF0; color: #1A1D23; }
+.dark button.ghost { border-color: #252A36; background: transparent; color: #E8EAF0; }
+.dark button.ghost:hover { background: #252A36; }
+
+input, select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 8px 12px;
+  width: 100%;
+  border: 1px solid #ECEEF2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1A1D23;
+  outline: none;
+  transition: border-color 0.15s;
+  margin: 0;
+}
+
