@@ -7,7 +7,7 @@ import TransactionsTable from "./components/TransactionsTable";
 import RoleSwitcher from "./components/RoleSwitcher";
 import Insights from "./components/Insights";
 
-import { transactionsData } from "./data/mockData";
+import { transactionsData } from "./Data/mockData";
 
 const App = () => {
   const [transactions, setTransactions] = useState(transactionsData);
@@ -24,19 +24,25 @@ const App = () => {
         </button>
       </div>
 
-      <RoleSwitcher role={role} setRole={setRole} />
+      <div className="cards-container">
 
-      <DashboardCards transactions={transactions} />
+        <RoleSwitcher role={role} setRole={setRole} />
 
-      <Charts transactions={transactions} />
+        <DashboardCards transactions={transactions} />
 
-      <Insights transactions={transactions} />
+        <Charts transactions={transactions} />
 
-      <TransactionsTable
-        transactions={transactions}
-        role={role}
-        setTransactions={setTransactions}
-      />
+        <Insights transactions={transactions} />
+
+        <TransactionsTable
+          transactions={transactions}
+          role={role}
+          setTransactions={setTransactions}
+        />
+      </div>
+      <div className="footer">
+        <h1>Finance Dashboard 💰</h1>
+      </div>
     </div>
   );
 };

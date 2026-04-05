@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.header {
+.header, .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,12 +25,21 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+.cards-container{
+  margin: 20px 10px;
+}
+
 .dark{
   background: #0F1117;
   color:#E8EAF0;
 }
 
 .dark .header {
+  background: #161A24;
+  border-color: #252A36;
+}
+
+.dark .footer{
   background: #161A24;
   border-color: #252A36;
 }
@@ -58,6 +67,7 @@ body {
   border-radius: 14px;
   padding: 18px 20px;
   transition: background 0.3s, border-color 0.3s;
+  margin: 10px;
 }
 
 
